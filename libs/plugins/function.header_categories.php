@@ -1,0 +1,1 @@
+<?phpfunction smarty_function_header_categories($params, &$smarty){    $sql="select * from catalog where id_p=0";    $res_q=  mysql_query($sql);    echo "<select name='search_cat' id='cat1' class='styled'>";      while ($row=  mysql_fetch_array($res_q)){      echo "<option value='".$row['id']."'>".$row['name']."</option>";  }  echo "</select>";}?>

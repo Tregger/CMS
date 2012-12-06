@@ -1,0 +1,71 @@
+@charset "iso-8859-1";
+/* author: Viper */
+/* Creation date: 8/30/2003 */
+a:link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #0099FF;
+text-decoration: none;
+}
+
+a:active {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #0099FF;
+text-decoration: none;
+}
+
+a:visited {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #0099FF;
+text-decoration: none;
+}
+
+a:hover {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #0000FF;
+text-decoration: underline;
+}
+
+.content {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+}
+
+.block-title {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+color: #0000FF;
+text-decoration: none;
+}
+
+.bullet {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #FF0000;
+text-decoration: none;
+}
+
+.title {
+font-family: Impact, Arial, Helvetica;
+font-size: 30px;
+color: #0000FF;
+text-decoration: none;
+}
+
+.copyright {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #0099FF;
+text-decoration: none;
+font-weight: bold;
+}
+
+.bodyline {
+background: #FFFFFF;
+border: 4px double #336699;
+}
