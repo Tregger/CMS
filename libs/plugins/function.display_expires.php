@@ -4,17 +4,17 @@ function smarty_function_display_expires($params, &$smarty)
 {
     $st_day=$params['st_day'];
     $day_col=$params['day_col'];
-    $end_date=$st_day+($day_col*84600);
+    $end_date=$st_day+($day_col*86400);
     $time=$end_date-time();
     if($time <0){
         echo "expired";
     }else{
         //295282
-        $days=floor($time/84600);
-        $hours=floor(($time-$days*84600)/60/60);
+        $days=floor($time/86400);
+        $hours=floor(($time-$days*86400)/60/60);
    
-        $minutes=floor(($time-$days*84600-$hours*3600)/60);
-        $seconds=$time-$days*84600-$hours*24-$minutes*60;
+        $minutes=floor(($time-$days*86400-$hours*3600)/60);
+        $seconds=$time-$days*86400-$hours*24-$minutes*60;
         $str=""; 
         if($days>=1){
             $str.=$days." d ";
