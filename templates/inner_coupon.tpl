@@ -180,11 +180,11 @@
 		<div class="ci_claims">
 			<img src="/images/claim.jpg"/><span id="claim_count">{claim_count id=$coupon.id}</span>  CLAIMS
 		</div>
-		<div class="ci_time">Time Left: <b>{if $coupon.st_day+($coupon.day_col*84600)-time()>0}<span id="time">{*display_expires st_day=$coupon.st_day day_col=$coupon.day_col*}</span>{else}Expired{/if}</b> (Value:  <b><span style="color:#22b14c">${$coupon.price}</span></b>)</div>
+		<div class="ci_time">Time Left: <b>{if $coupon.st_day+($coupon.day_col*86400)-time()>0}<span id="time">{*display_expires st_day=$coupon.st_day day_col=$coupon.day_col*}</span>{else}Expired{/if}</b> (Value:  <b><span style="color:#22b14c">${$coupon.price}</span></b>)</div>
 		<div class="ci_date"><img src="images/clndr.jpg"/>Launched:
                   
                     
-                    {date('M d, Y', $coupon.st_day)} <img src="images/clc.png"/>ends: {date('M d, Y', $coupon.st_day+($coupon.day_col*84600))}</div>
+                    {date('M d, Y', $coupon.st_day)} <img src="images/clc.png"/>ends: {date('M d, Y', $coupon.st_day+($coupon.day_col*86400))}</div>
 		<div class="ci_claimVau">
 			 <a class="ci_claimVauBtn" href="javascript:void(0)">
 				<div class="ci_claimVauBtnName">Claim Voucher</div>
@@ -311,7 +311,7 @@
                                         
                                         $('.ci_claimVauBtn').click(function(){
                                         
-                                        {if $coupon.st_day+($coupon.day_col*84600)-time()>0}
+                                        {if $coupon.st_day+($coupon.day_col*86400)-time()>0}
                                            
                                                   dat='user_id={$smarty.session.userid}&deal={$coupon.id}';
                                                   $.ajax({
@@ -338,6 +338,6 @@
                                  </script>
                                  <script src="/js/timer.js"></script>
                                  <script> 
-               CreateTimer('time', {($coupon.st_day+($coupon.day_col*84600))-time()},1);                                                     
+               CreateTimer('time', {($coupon.st_day+($coupon.day_col*86400))-time()},1);                                                     
         </script>
                                  </div>
