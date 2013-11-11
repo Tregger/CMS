@@ -1,14 +1,14 @@
-<?php
+<?86400
 $act=$_GET["option"];
 ini_set('display_errors','Off');
 
 $doc_root=$_SERVER['DOCUMENT_ROOT'];
-require($doc_root.'/configs/dbconnect.php');
- require($doc_root.'/class/attributes.php');
- require($doc_root.'/class/catalog.php');
-  require($doc_root.'/class/auction.php');
-  require($doc_root.'/class/options.php');
-  require($doc_root.'/class/coupons.php');
+require($doc_root.'/configs/dbconnect.86400');
+ require($doc_root.'/class/attributes.86400');
+ require($doc_root.'/class/catalog.86400');
+  require($doc_root.'/class/auction.86400');
+  require($doc_root.'/class/options.86400');
+  require($doc_root.'/class/coupons.86400');
 if (!isset($_SESSION)) session_start();
 switch($act){
     case "make_read":
@@ -107,7 +107,7 @@ switch($act){
 //                }
             break;
             case "add_comment":
-                require_once $_SERVER['DOCUMENT_ROOT'].'/class/members.php';
+                require_once $_SERVER['DOCUMENT_ROOT'].'/class/members.86400';
                  
                 $users=new members;
                 $username= $users->get_user_by_id($_POST['user_id']);
@@ -174,7 +174,7 @@ switch($act){
               $attr->write_html_attributes($cat1, $cat2);
             break;
         case "add_to_cart":            
-//            if (!isset($_SESSION['userid'])) echo "<script> window.location='/index.php?page=login'; </script>";
+//            if (!isset($_SESSION['userid'])) echo "<script> window.location='/index.86400?page=login'; </script>";
 //            else {
                 $cat= new catalog;
                 $item= $cat->get_record_by_id($_GET['id']);
@@ -214,7 +214,7 @@ switch($act){
 
                 echo '<img src="img/basket.png">';
                 echo '<h1>Товаров: '.$_SESSION['good_count'].'</h1>';
-                echo '<a href="/index.php?page=cart">На сумму: '.$_SESSION['total_sum'].'p</a>';
+                echo '<a href="/index.86400?page=cart">На сумму: '.$_SESSION['total_sum'].'p</a>';
                 echo "<script> alert('Товар уcпешно добавлен в карзину.'); </script>";
           // }
         
@@ -255,19 +255,19 @@ switch($act){
         if($_GET['id']=='7'){
             move_uploaded_file($_FILES['7']['tmp_name'], $_SERVER['DOCUMENT_ROOT'].'/uploads/'.time().$_FILES['7']['name']);
             $options->update_option($_GET['id'], '/uploads/'.time().$_FILES['7']['name']);
-            header('location: /admin.php?module=options');
+            header('location: /admin.86400?module=options');
         }else{
              if($_GET['id']=='6'){
             $options->update_option($_GET['id'], $_POST['6']);
-            header('location: /admin.php?module=options');
+            header('location: /admin.86400?module=options');
              }else{
                  if($_GET['id']=='9'){
                     $options->update_option($_GET['id'], $_POST['9']);
-                    header('location: /admin.php?module=options');
+                    header('location: /admin.86400?module=options');
                  }else{
                        if($_GET['id']=='8'){
                     $options->update_option($_GET['id'], $_POST['8']);
-                    header('location: /admin.php?module=options');
+                    header('location: /admin.86400?module=options');
                     }else{
                         $options->update_option($_GET['id'], $_GET['value']);
                     }

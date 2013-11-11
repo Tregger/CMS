@@ -47,7 +47,7 @@ $html='
 								</div>
 							</td>
 							<td class="redeem_table_right">
-								 <div class="expire_date">Expires: '.date('F d, Y', $res[1]['st_day']+($res[1]['day_col']*84600)).'</div>
+								 <div class="expire_date">Expires: '.date('F d, Y', $res[1]['st_day']+($res[1]['day_col']*86400)).'</div>
 <div style="font-size:3px; color: #FFF">.</div>								
 <div class="redemption_code">Redemption Code</div>
 <div style="font-size:3px; color: #FFF">.</div>
@@ -79,7 +79,7 @@ $html='<div class="voucher_body">
 									'.$res[1]['city'].'<br> '.$res[1]['phone'].'</div>
 			</div>
 			<div class="voucher_WhiteField_RightCol">
-				<div class="expires">Expires : '.date('F d, Y', $res[1]['st_day']+($res[1]['day_col']*84600)).'</div>
+				<div class="expires">Expires : '.date('F d, Y', $res[1]['st_day']+($res[1]['day_col']*86400)).'</div>
 				<div class="vaucherCode_head">Redemption Code</div>
 				<div class="vaucherCode">'.$res[1]['redemption'] .'</div>
 			</div>
